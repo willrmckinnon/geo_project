@@ -2,3 +2,5 @@
 .env
 .env.*
 draft.ipynb
+draft*.ipynb
+data/towns_w_env_concerns.json

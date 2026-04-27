@@ -16,6 +16,7 @@ import cv2
 import torch
 import torch.nn as nn
 
+from PIL import Image
 
 
 #SPECIFICALLY FOR SENTINEL ITEMS
@@ -43,12 +44,6 @@ class Sentinel_Item:
 
         #Format the image for viewing
         img = Image.fromarray(np.transpose(band_data, axes=[1, 2, 0]))
-        w = img.size[0]
-        h = img.size[1]
-        aspect = w / h
-        target_w = 800
-        target_h = (int)(target_w / aspect)
-        img = img.resize((target_w, target_h), Image.Resampling.BILINEAR)
 
         return img
     
